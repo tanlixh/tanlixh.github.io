@@ -4,22 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-    .top {
-        width: 1200px;
-        height: 100%;
-        text-align:center;
-        font-weight: 400;
-        color: #0094ff;
-        background-color: pink;
-        margin:0 auto;
-        font-size: 32px;
-    }
-    
-    </style>
+    <title>佐佐驿行</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./jquery-min.js"></script>        
 </head>
-<body>
-    <div class="top">welcome !!</div>
+    <body>
+        
+    <canvas></canvas>
+        
+    <script src="./starts.js"></script>
+     
+    <p class="Conte">余生第一天</p>
+       
+<script>
+var $p=$('p');
+$p.on('click',function(){
+
+    $(this).animate({
+        "left":0,
+        "marginLeft":0,
+        "opacity":0
+    },1500,function(){
+        $p.width(294).text("你选择如何度过").css({
+            "opacity":0,
+            "right":0,
+            "left":"auto",
+            "marginLeft":"auto",
+            "marginRight":0
+        }).animate({
+            "opacity":1,
+            "right":"50%",
+            "marginRight":"-147px"
+        },1500,function(){
+            $p.off("click");
+        })
+    }).delay(300)
+})
+
+</script>
 </body>
 </html>
